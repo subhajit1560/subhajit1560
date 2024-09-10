@@ -65,3 +65,20 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="40" alt="googlecloud logo"  />
 </div>
+
+
+# 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thesubhajitmondal) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/subhajitmondal_._/) 
+
+---
+
+
+# 📈 GitHub Stats
+
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=subhajit1560&show_icons=true&locale=en&layout=compact&count_private=true" alt="subhajit1560" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=subhajit1560&" alt="subhajit1560" /></p>
+
+
+
+---
