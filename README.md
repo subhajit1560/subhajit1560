@@ -1,8 +1,6 @@
 <h1 align="center">Hi 👋, I'm Subhajit Mondal</h1>
 <h3 align="center">A passionate frontend developer from India</h3>
 
-- 🔭 I’m currently working on [Flappy Bird Game](https://flapyourbird.tiiny.site)
-
 - 📫 How to reach me **subhajitm1560@gmail.com**
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/thesubhajitmondal](https://www.linkedin.com/in/thesubhajitmondal)
