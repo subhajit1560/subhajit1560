@@ -3,7 +3,7 @@
   <img src="./banner.svg" width="100%" alt="Subhajit Mondal"/>
 </p>
 <!-- TITLE -->
-# Hi, I'm Subhajit Mondal 👋
+Hi, I'm Subhajit Mondal 👋
 
 > Final-year B.Tech CSE @ RCCIIT · Building AI-powered web apps · Open to SDE roles
 
