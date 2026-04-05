@@ -1,105 +1,100 @@
 <svg width="1280" height="220" viewBox="0 0 1280 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;700&amp;family=Inter:wght@300;400&amp;display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&amp;family=Inter:wght@300;400;700;800&amp;display=swap');
+      
+      .text-title {
+        font-family: 'Lorenza', 'Tenor Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+      }
+      
+      .text-subtitle {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 4px;
+      }
     </style>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0f"/>
-      <stop offset="50%" style="stop-color:#0d1b2e"/>
-      <stop offset="100%" style="stop-color:#0a0a0f"/>
-    </linearGradient>
-    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.35"/>
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.15"/>
-    </linearGradient>
-    <linearGradient id="glow2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.05"/>
-    </linearGradient>
-    <linearGradient id="textgrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#e8f4ff"/>
-      <stop offset="45%" style="stop-color:#ffffff"/>
-      <stop offset="100%" style="stop-color:#93c5fd"/>
-    </linearGradient>
-    <radialGradient id="orb1" cx="25%" cy="40%" r="40%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.18"/>
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0"/>
-    </radialGradient>
-    <radialGradient id="orb2" cx="78%" cy="60%" r="35%">
-      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
-    </radialGradient>
-    <filter id="blur1">
-      <feGaussianBlur stdDeviation="28"/>
+
+    <!-- Mesh Gradient Blurring Filter -->
+    <filter id="mesh-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="65" />
     </filter>
-    <filter id="blur2">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
-    <clipPath id="clip">
+
+    <!-- Text Metallic Gradient -->
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- Liquid Blob Gradients -->
+    <radialGradient id="blob1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="blob2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blob3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    
+    <clipPath id="screen-clip">
       <rect width="1280" height="220" rx="0"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#clip)">
-    <!-- Base background -->
-    <rect width="1280" height="220" fill="url(#bg)"/>
+  <g clip-path="url(#screen-clip)">
+    <!-- Base Dark Background -->
+    <rect width="1280" height="220" fill="#0B0B12"/>
 
-    <!-- Ambient orbs -->
-    <ellipse cx="320" cy="90" rx="380" ry="220" fill="url(#orb1)" filter="url(#blur1)"/>
-    <ellipse cx="1000" cy="130" rx="320" ry="200" fill="url(#orb2)" filter="url(#blur1)"/>
+    <!-- Fluid / Liquid Shapes (macOS style) -->
+    <g filter="url(#mesh-blur)">
+      <ellipse cx="200" cy="50" rx="400" ry="250" fill="url(#blob1)"/>
+      <ellipse cx="1000" cy="180" rx="450" ry="300" fill="url(#blob2)"/>
+      <ellipse cx="700" cy="-50" rx="350" ry="250" fill="url(#blob3)"/>
+      <ellipse cx="1100" cy="20" rx="300" ry="200" fill="#8B5CF6" opacity="0.6"/>
+    </g>
 
-    <!-- Liquid wave layer 1 (deep) -->
-    <path d="M0,140 C160,100 320,170 480,130 C640,90 800,160 960,125 C1100,95 1200,145 1280,120 L1280,220 L0,220 Z"
-      fill="#1a2744" opacity="0.5"/>
+    <!-- Frosted Glass Overlay -->
+    <rect width="1280" height="220" fill="rgba(15, 15, 20, 0.5)" />
 
-    <!-- Liquid wave layer 2 (mid) -->
-    <path d="M0,160 C200,125 380,185 560,150 C720,118 880,175 1050,145 C1150,128 1220,160 1280,148 L1280,220 L0,220 Z"
-      fill="#0f1e3a" opacity="0.7"/>
+    <!-- Glass Highlights / Borders -->
+    <line x1="0" y1="1" x2="1280" y2="1" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+    <line x1="0" y1="219" x2="1280" y2="219" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    <rect width="1280" height="220" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2"/>
 
-    <!-- Liquid wave layer 3 (surface shine) -->
-    <path d="M0,182 C180,162 360,195 540,175 C700,157 860,190 1040,170 C1140,158 1220,178 1280,168 L1280,220 L0,220 Z"
-      fill="#0a0f1e" opacity="0.9"/>
-
-    <!-- Top subtle highlight line -->
-    <line x1="0" y1="1" x2="1280" y2="1" stroke="#3b82f6" stroke-width="1" opacity="0.25"/>
-
-    <!-- Glass shimmer strip -->
-    <rect x="0" y="0" width="1280" height="60" fill="url(#glow1)" opacity="0.4"/>
+    <!-- macOS Window Controls -->
+    <g transform="translate(30, 25)">
+      <circle cx="0" cy="0" r="7" fill="#FF5F56" stroke="#E0443E" stroke-width="0.5"/>
+      <circle cx="24" cy="0" r="7" fill="#FFBD2E" stroke="#DEA123" stroke-width="0.5"/>
+      <circle cx="48" cy="0" r="7" fill="#27C93F" stroke="#1AAB29" stroke-width="0.5"/>
+    </g>
 
     <!-- Name text -->
-    <text
-      x="640" y="105"
-      font-family="Figtree, Inter, -apple-system, BlinkMacSystemFont, sans-serif"
-      font-size="58"
-      font-weight="700"
-      letter-spacing="-1.5"
+    <text 
+      class="text-title"
+      x="640" y="115"
       text-anchor="middle"
-      fill="url(#textgrad)">
+      fill="url(#text-gradient)">
       Subhajit Mondal
     </text>
 
     <!-- Tagline text -->
-    <text
-      x="640" y="142"
-      font-family="Figtree, Inter, -apple-system, BlinkMacSystemFont, sans-serif"
-      font-size="16"
-      font-weight="300"
-      letter-spacing="3.5"
+    <text 
+      class="text-subtitle"
+      x="640" y="158"
       text-anchor="middle"
-      fill="#93c5fd"
+      fill="#F8FAFC"
       opacity="0.85">
-      FULL-STACK DEVELOPER  ·  AI &amp; WEB APPS  ·  JAVA  ·  PYTHON  ·  REACT
+      FULL-STACK DEVELOPER  |  AI &amp; WEB APPS  |  JAVA  |  PYTHON  |  REACT
     </text>
-
-    <!-- Subtle dot accent left -->
-    <circle cx="160" cy="108" r="3" fill="#3b82f6" opacity="0.5"/>
-    <circle cx="175" cy="108" r="2" fill="#3b82f6" opacity="0.3"/>
-    <circle cx="187" cy="108" r="1.5" fill="#3b82f6" opacity="0.15"/>
-
-    <!-- Subtle dot accent right -->
-    <circle cx="1120" cy="108" r="3" fill="#7c3aed" opacity="0.5"/>
-    <circle cx="1105" cy="108" r="2" fill="#7c3aed" opacity="0.3"/>
-    <circle cx="1093" cy="108" r="1.5" fill="#7c3aed" opacity="0.15"/>
   </g>
 </svg>
