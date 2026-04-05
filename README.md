@@ -1,6 +1,6 @@
 <!-- HEADER BANNER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0d1117,100:1a1a2e&amp;height=220&amp;section=header&amp;text=Subhajit%20Mondal&amp;fontSize=48&amp;fontColor=58a6ff&amp;animation=fadeIn&amp;fontAlignY=35&amp;desc=Full-Stack%20%7C%20AI%20Developer%20%7C%20Java%20%7C%20Python%20%7C%20React&amp;descAlignY=55&amp;descSize=16&amp;descColor=8b949e" width="100%" alt="header" />
+  <img src="./banner.svg" width="100%" alt="Subhajit Mondal"/>
 </p>
 <!-- TITLE -->
 # Hi, I'm Subhajit Mondal 👋
